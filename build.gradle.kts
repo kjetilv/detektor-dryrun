@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation("io.gitlab.arturbosch.detekt:detekt-api:1.18.0-RC2")
+    implementation("io.gitlab.arturbosch.detekt:detekt-metrics:1.18.0-RC2")
 
     testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.18.0-RC2")
     testImplementation("org.assertj:assertj-core:3.20.2")

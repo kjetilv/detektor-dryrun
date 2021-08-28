@@ -5,13 +5,14 @@ import io.gitlab.arturbosch.detekt.api.RuleSet
 import io.gitlab.arturbosch.detekt.api.RuleSetProvider
 
 class MyRuleSetProvider : RuleSetProvider {
-  override val ruleSetId: String = "MyRuleSet"
+  override val ruleSetId: String = "KjetilsRuleset"
 
   override fun instance(config: Config): RuleSet {
+    println("Providing $this ruleset")
     return RuleSet(
       ruleSetId,
       listOf(
-        MyRule(config),
+        ParameterListAverageSize(config),
       ),
     )
   }
