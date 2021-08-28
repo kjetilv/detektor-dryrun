@@ -8,7 +8,6 @@ class MyRuleSetProvider : RuleSetProvider {
   override val ruleSetId: String = "KjetilsRuleset"
 
   override fun instance(config: Config): RuleSet {
-    println("Providing $this ruleset")
     return RuleSet(
       ruleSetId,
       listOf(

@@ -15,8 +15,6 @@ class NumberOfLoopsProcessor(
     override fun onProcess(file: KtFile, bindingContext: BindingContext) {
         super.onProcess(file, bindingContext)
         file.putUserData(numberOfEnumsKey, visitor.enumCount)
-
-        println("Did put $this: ${visitor.enumCount}")
     }
 
     companion object {

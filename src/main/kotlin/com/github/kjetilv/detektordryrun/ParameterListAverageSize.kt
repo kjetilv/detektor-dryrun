@@ -22,7 +22,6 @@ class ParameterListAverageSize(config: Config) : Rule(config) {
         super.visitParameterList(list)
         listsFound += 1
         paramtersCounted += list.parameters.size
-        println("Did count $this stuff")
     }
 
     override fun visitClass(klass: KtClass) {
@@ -39,6 +38,5 @@ class ParameterListAverageSize(config: Config) : Rule(config) {
                             "Threshold is specified with 6.",
                     references = emptyList()))
         }
-        println("Did $this sthuff")
     }
 }
