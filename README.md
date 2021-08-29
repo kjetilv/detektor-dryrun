@@ -1,32 +1,21 @@
-# Detekt custom rule template
+# Detekt custom rule 
 
-This repository is a template. You can use it to generate your own repository to write and share your custom rules.
+Uses detekt, provides:
 
-## How to use it
+* a custom processor which provides a new metric
+* a custom report format (CSV)
 
-1. Create a new repository using this one as a template. [Click here][create_template]
-2. Edit MyRule to fit your use case
-3. Share your rule! You can upload your rule to [Maven Central][maven_central] if you want. If you don't want to do
-   all the steps that Maven Central requires you can just share your rule using [jitpack][jitpack].
-4. Extra: you can remove all this README and explain what your rule does and how to configure it.
+Also demonstrates usage of the custom logic from the gradle plugin, by (cough) adding itself as a dependency. 
 
-## Documentation
+To use that, first build and `./gradlew publishToMavenLocal`.  You should see the html report appear in `build/reports` 
+as a side effect of this.
 
-You can find the documentation about how to write custom [rules here][custom_rule_documentation].
+Having done that, uncomment the gradle stuff that picks it up (see TODO comments in build file) and do 
+`./gradlew build` or something.
 
-## Note
+You will see a rather useless new metric in the HTML report, and a CSV report.
 
-Remember that, by default, all the rules aren't enable. To activate the rule you need to write something like this in your
-yaml configuration:
+This is real-life bootstrapping, kids, not _just_ a hack.  Just about.
 
-```yaml
-MyRuleSet:
-  MyRule:
-    active: true
-```
-
-
-  [create_template]: https://github.com/detekt/detekt-custom-rule-template/generate
-  [maven_central]: https://search.maven.org/
-  [custom_rule_documentation]: https://detekt.github.io/detekt/extensions.html
-  [jitpack]: https://jitpack.io/
+Feel free to split this contraption into two modules: One to build the custom analysis logic and one to use it. For now 
+this repo mainly helps with pointing out the required nuts and bolts. 

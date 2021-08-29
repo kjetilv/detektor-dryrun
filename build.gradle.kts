@@ -22,7 +22,7 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.20.2")
     testImplementation("junit:junit:4.13.2")
 
-//     Uncomment below line after doing a ./gradlew publishToMavenLocal :-)
+//     TODO Uncomment below line after doing a ./gradlew publishToMavenLocal :-)
 //    detektPlugins("$group:$name:$version")
 }
 
@@ -38,10 +38,11 @@ detekt {
             enabled = true
             destination = file("build/reports/detekt.html")
         }
-        custom {
-            reportId = "CSVReport"
-            destination = file("build/reports/detekt.csv")
-        }
+    // TODO The below also needs a build and deploy to local maven repo before it can be used
+//        custom {
+//            reportId = "CSVReport"
+//            destination = file("build/reports/detekt.csv")
+//        }
     }
 }
 
