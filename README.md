@@ -10,7 +10,7 @@ Also demonstrates usage of the custom logic from the gradle plugin, by (cough) a
 To use that, first build and `./gradlew publishToMavenLocal`.  You should see the html report appear in `build/reports` 
 as a side effect of this.
 
-Having done that, uncomment the gradle stuff that picks it up (see TODO comments in build file) and do 
+Having done that, uncomment the 2 build file sections that pick it up (see 2 TODO comments in build file) and do 
 `./gradlew build` or something.
 
 You will see a rather useless new metric in the HTML report, and a CSV report.
