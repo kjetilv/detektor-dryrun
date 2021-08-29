@@ -38,6 +38,10 @@ detekt {
             enabled = true
             destination = file("build/reports/detekt.html")
         }
+        custom {
+            reportId = "CSVReport"
+            destination = file("build/reports/detekt.csv")
+        }
     }
 }
 
