@@ -1,0 +1,35 @@
+processors:
+  active: true
+
+console-reports:
+  active: false
+
+output-reports:
+  active: true
+
+comments:
+  active: false
+
+complexity:
+  active: false
+
+coroutines:
+  active: false
+
+empty-blocks:
+  active: false
+
+exceptions:
+  active: false
+
+formatting:
+  active: false
+
+naming:
+  active: false
+
+performance:
+  active: false
+
+potential-bugs:
+  active: false
